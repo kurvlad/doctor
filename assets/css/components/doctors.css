@@ -1,0 +1,160 @@
+.title-doctor {
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+
+.doctor-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  position: relative;
+}
+
+.doctor-item-card {
+  border: 1px solid #E0E4F4;
+  border-radius: 24px;
+  padding: 20px 26px 15px 23px;
+  position: absolute;
+  background-color: white;
+}
+
+
+.doctor-top, .doctor-bottom {
+  display: flex;
+
+}
+
+.doctor-bottom {
+  justify-content: space-between;
+}
+
+.doctor-item {
+  margin-right: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  width: 790px;
+  min-height: 416px;
+
+}
+
+.doctor-item:nth-child(2n) {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.doctor-left {
+  width: 299px;
+  height: 304px;
+  position: relative;
+  margin-right: 32px;
+}
+
+.doctor-img {
+  border-radius: 24px;
+}
+
+.doctor-exp {
+  /* color: red; */
+  position: absolute;
+  /* bottom: 16px; */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFFFFF;
+  border-radius: 40px;
+  padding: 10px 11px 10px 35px;
+  background-image: url('../../svg/exp.svg');
+  background-repeat: no-repeat;
+  background-size: 13px 12px;
+  background-position-y: 50%;
+  background-position-x: 12px;
+}
+
+.doctor-right {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.doctor-name {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.descr-proff, .descr-category {
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+.doctor-descr {
+  margin-bottom: 36px
+}
+
+.descr-proff {
+  font-family: 'Raleway';
+  border: 1px solid #E0E4EB;
+  border-radius: 50px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.descr-category {
+  font-family: 'Golos';
+  background-image: url('../../svg/Subtract.svg');
+  background-size: 13px 18px;
+
+}
+
+.descr-category, .doctor-clinic, .doctor-detail, .meet, .dropdown-btn {
+  background-position-y: center;
+  background-repeat: no-repeat;
+  padding-left: 28px;
+}
+
+.doctor-clinic {
+  background-image: url('../../svg/clinics.svg');
+  background-size: 18px 18px;
+  margin-bottom: 26px;
+}
+
+.doctor-info {
+  color: #8E94AB;
+  margin-bottom: 31px;
+}
+
+.doctor-detail {
+  background-image: url('../../svg/descr.svg');
+  background-size: 18px 18px;
+
+}
+
+.meet {
+  background-color: #EB5757;
+  color: #FFFFFF;
+  background-image: url('../../svg/edit2.svg');
+  padding: 15px 20px 15px 40px;
+  border-radius: 48px;
+  background-position-x: 23px;
+}
+
+.dropdown-btn {
+  padding: 15px 20px 15px 25px;
+  font-size: 16px;
+  background-image: url('../../svg/right\ 2.svg');
+  cursor: pointer;
+}
+
+.dropdown-btn-active {
+  background-image: url('../../svg/right1.svg');
+}
+.doctors-btn{
+  text-align: center;
+}
+.btn-more {
+  justify-content: center;
+  background: #F6F7FB;
+  border-radius: 60px;
+  color: #8E94AB;
+  font-size: 14px;
+  text-align: center;
+}

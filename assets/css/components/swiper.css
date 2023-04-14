@@ -1,0 +1,64 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  padding-left: 73px;
+  width: 700px;
+  height: 95px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 14px;
+  padding: 15px 20px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+
+}
+
+.swiper-text {
+  border: 1px solid #E0E4EB;
+  border-radius: 56px;
+  padding: 15px 20px;
+}
+
+.swiper-text-active {
+  background-color: #2CC379;
+  color: #FFFFFF;
+}
+
+.swiper-button-next {
+  position: absolute;
+  left: 50px;
+}
+
+.swiper-text-up {
+
+  font-size: 18px;
+}
+
+.swiper-text-down {
+  font-size: 12px;
+}
+
+.swiper-text-active .swiper-text-up{
+  
+color: #FFFFFF;
+}
+.swiper-text-active .swiper-text-down{
+  color: #ABE8CA;
+}

@@ -1,0 +1,7 @@
+.dropdown-card{
+  display: none;
+}
+
+.dropdown-card-active{
+  display: block;
+}

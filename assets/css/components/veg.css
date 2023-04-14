@@ -1,0 +1,123 @@
+.veggies-bottom {
+
+  background-color: #F6F7FB;
+  border-radius: 24px;
+  padding: 30px;
+  /*  */
+}
+
+.vegies-top {
+  columns: 2;
+  margin-bottom: 30px;
+}
+
+.veggies-title {
+
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.veggies-bottom {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+}
+
+.veg-left {
+  padding-right: 108px;
+}
+
+.veg-right-top {
+  display: grid;
+  grid-template-columns: 40% 25% 25% 10%;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.price {
+  display: flex;
+}
+
+.veg-close {
+  background-image: url('../../svg/veg-close.svg');
+
+  width: 24px;
+  height: 24px;
+  background-size: 24px;
+}
+
+.veg-close, .count-clinics, .price, .addr-show {
+  background-repeat: no-repeat;
+
+}
+
+.veg-meet {
+  padding: 9px 11px 9px 33px;
+  background-position-x: 12px;
+  margin-right: 23px;
+}
+
+.veg-right-bottom {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.veg-img {
+  width: 100%;
+  /* margin-right: 16px; */
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-left: 16px;
+}
+
+.count-clinics {
+  padding-left: 17px;
+  background-image: url('../../svg/home.svg');
+  background-size: 16px;
+  background-position-y: center;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+
+.price {
+  padding-left: 26px;
+  background-image: url('../../svg/price.svg');
+  background-position-y: center;
+  background-size: 17px;
+}
+
+.new-price {
+  margin-right: 8px;
+}
+
+.old-price {
+  color: #8E94AB;
+  font-size: 13px;
+}
+
+.addr {
+  margin-bottom: 17px;
+}
+
+.addr-show {
+  background-image: url('../../svg/veg-map.svg');
+  padding-left: 22px;
+  background-position-y: center;
+}
+
+.veg-subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  color: #2D264B;
+  margin-bottom: 71px;
+}
+
+.veg-descr {
+  letter-spacing: -0.02em;
+  color: #8E94AB;
+}

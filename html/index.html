@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/local/assets/css/global.css">
+  <link rel="stylesheet" href="/local/assets/fonts/icomoon/style.css">
+  <link rel="stylesheet" href="/local/assets/css/main.css">
+  <!-- search -->
+  <link rel="stylesheet" href="/local/assets/css/components/search.css">
+  <link rel="stylesheet" href="/local/assets/css/components/doctors.css">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/local/assets/css/components/swiper.css">
+  <link rel="stylesheet" href="/local/assets/css/components/dropdown_doctor.css">
+  <!-- services -->
+  <link rel="stylesheet" href="/local/assets/css/components/services.css">
+  <!-- veggies -->
+  <link rel="stylesheet" href="/local/assets/css/components/veg.css">
+  <!-- clinics -->
+  <link rel="stylesheet" href="/local/assets/css/components/clinics.css">
+
+
+
+  <!-- footer -->
+  <link rel="stylesheet" href="/local/assets/css/components/footer.css">
+
+
+
+
+
+
+
+  <script src="/local/assets/js/libs.js"></script>
+  <script src="/local/assets/js/validation.js"></script>
+  <script src="/local/assets/js/popup.js"></script>
+  <script src="/local/assets/js/main.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=0283643d-ca6b-45a8-a44c-e99bb7268c40"
+    type="text/javascript"></script>
+  <script src='/local/assets/js/components/ymaps.js'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <title>Айболит</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#" class="header__inner_item header__logo">
+          <img src="/local/assets/svg/logo.png" alt="">
+        </a>
+        <div class="header__inner_item header__burger">
+          <div class="icon__burger"></div>
+          <span>Меню</span>
+        </div>
+        <div class="header__inner_item header__info">
+          <a href=“tel:+88005000600” class="header__number">
+            <i class="icon-phone icon--grey"></i>
+            <span>8 800 5000 600</span>
+          </a>
+          <div class="header__city dropdown city__dropdown">
+            <i class="icon-gps icon--grey"></i>
+            <div class="dropdown__head">
+              <span class='city__dropdown_title'>Казань</span>
+              <i class="icon-arrow-down"></i>
+            </div>
+            <div class="dropdown__body dropdown__body--auto dropdown__body_city" style="display:none;">
+              <div class="city__title" data-city='Казань'>
+                Ваш город
+              </div>
+
+              <div class="city__choose">
+                <div class="button button--green">Верно</div>
+                <div class="city__choose_other">
+                  <i class="icon-gps icon--green"></i>
+                  Другой город
+                </div>
+              </div>
+              <div class="city__list" style="display:none;">
+                <div class="city__list_item">Зелинодольск <i class="icon-mark icon--green"></i>
+                </div>
+                <div class="city__list_item active">Казань <i class="icon-mark icon--green"></i>
+                </div>
+                <div class="city__list_item">Лениногорск <i class="icon-mark icon--green"></i></div>
+                <div class="city__list_item">Йошкар-Ола </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__inner_item header__buttons">
+          <div class="button header__button button--green">
+            <i class="icon-service icon--white"></i>
+            Услуги
+          </div>
+          <div class="button header__button button--grey">
+            <i class="icon-analysis icon--red"></i>
+            Результат анализов
+          </div>
+        </div>
+        <ul class="header__inner_item header__nav">
+          <li><a href="">Наши врачи</a></li>
+          <li><a href="">Акции</a></li>
+          <li><a href="">ФНС</a></li>
+          <li><a href="">Отзывы</a></li>
+        </ul>
+        <div class="header__inner_item header__search">
+          <i class="icon-search"></i>
+        </div>
+        <div class="header__inner_item header__note">
+          <div class="button button--red button--with-icon header__note_button">
+            <i class="icon-note icon--white"></i>
+            <span>Запись на прием</span>
+          </div>
+        </div>
+      </div>
+      <div class="header__menu">
+        <div class="container">
+          <!-- <div class="header__menu_search">
+                    <div class="custom__input">
+                        <input type="text" placeholder='Поиск по сайту'>
+                        <i class="icon-search"></i>
+                    </div>
+                </div> -->
+          <div class="header__menu_container grid">
+            <div class="nav__col nav__contacts">
+              <div class="nav__col_title point point--purple">КОНТАКТЫ</div>
+              <ul class="nav__col_list">
+                <li>
+                  <div class="header__city dropdown city__dropdown">
+                    <i class="icon-gps icon--grey"></i>
+                    <div class="dropdown__head">
+                      <span class='city__dropdown_title'>Казань</span>
+                      <i class="icon-arrow-down"></i>
+                    </div>
+                    <div class="dropdown__body dropdown__body--auto dropdown__body_city" style="display:none;">
+                      <div class="city__title" data-city='Казань'>
+                        Ваш город
+                      </div>
+
+                      <div class="city__choose">
+                        <div class="button button--green">Верно</div>
+                        <div class="city__choose_other">
+                          <i class="icon-gps icon--green"></i>
+                          Другой город
+                        </div>
+                      </div>
+                      <div class="city__list" style="display:none;">
+                        <div class="city__list_item">Зелинодольск <i class="icon-mark icon--green"></i>
+                        </div>
+                        <div class="city__list_item active">Казань <i class="icon-mark icon--green"></i>
+                        </div>
+                        <div class="city__list_item">Лениногорск <i class="icon-mark icon--green"></i></div>
+                        <div class="city__list_item">Йошкар-Ола </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="“tel:+88005000600”" class="header__number">
+                    <i class="icon-phone icon--grey"></i>
+                    <span>8 800 5000 600</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="help@mc-aybolit.ru" class="footer__mail_link">help@mc-aybolit.ru</a>
+                </li>
+              </ul>
+              <div class="social__links">
+                <a href="#" class="social_links_item">
+                  <i class="icon-wp"></i>
+                </a>
+                <a href="#" class="social_links_item">
+                  <i class="icon-tg"></i>
+                </a>
+                <a href="#" class="social_links_item">
+                  <i class="icon-inst"></i>
+                </a>
+              </div>
+            </div>
+            <div class="nav__col nav__pacients">
+              <div class="nav__col_title point">ПАЦИЕНТАМ</div>
+              <ul class="nav__col_list">
+                <li>
+                  <a href="" class="nav__col_list_item">Услуги</a>
+                </li>
+                <li>
+                  <a href="" class="nav__col_list_item">Результат анализов</a>
+                </li>
+                <li>
+                  <a href="" class="nav__col_list_item">Акции</a>
+                </li>
+                <li>
+                  <a href="" class="nav__col_list_item">ФНС</a>
+                </li>
+                <li>
+                  <a href="" class="nav__col_list_item">Отзывы</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav__col nav__company">
+              <div class="nav__col_title point point--blue">КОМПАНИЯ</div>
+              <ul class="nav__col_list">
+                <li>
+                  <a href="" class="nav__col_list_item">О компании</a>
+                </li>
+                <li>
+                  <a href="" class="nav__col_list_item">Наши врачи</a>
+                </li>
+                <li>
+                  <a href="" class="nav__col_list_item">Контакты</a>
+                </li>
+                <li>
+                  <a href="" class="nav__col_list_item">Сотрудничество</a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="nav__col nav__feedback">
+              <div class="nav__col_title point point--red">ОБРАТНАЯ СВЯЗЬ</div>
+              <ul class="nav__col_list">
+                <li>
+                  <a data-open-popup='feedback' class="nav__col_list_item">
+                    <i class="icon"></i>Написать нам
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="search-contain">
+    <div class="container">
+      <form action="" class="search-form">
+        <input type="text" class="search-input" placeholder="Поиск">
+        <button type="close" class="search-input-close"></button>
+      </form>
+      <h1 class="title-search">Результаты по запросу «грибы»</h2>
+        <div class="chose-criterion">
+          <ul class="list-reset list list-chose ">
+            <li class="list-item chose-item chose-item-active"><button class="btn-reset">Все результаты</button></li>
+            <li class="list-item chose-item"><button class="btn-reset">Врачи</button></li>
+            <li class="list-item chose-item"><button class="btn-reset">Услуги</button></li>
+            <li class="list-item chose-item"><button class="btn-reset">Прайс-лист</button></li>
+            <li class="list-item chose-item"><button class="btn-reset">Клиники</button></li>
+          </ul>
+        </div>
+        <div class="doctors">
+          <h2 class="title-doctor">Врачи</h3>
+            <ul class="list-reset doctor-list">
+              <li class="doctor-item">
+                <div class="doctor-item-card">
+                  <div class="doctor-top">
+                    <div class="doctor-left">
+                      <img src="../assets/img/doctor_photo.jpg" alt="" class="doctor-img">
+                      <p class="doctor-exp">Стаж 15 лет</p>
+                    </div>
+                    <div class="doctor-right">
+                      <h3 class="doctor-name">Лазарева Елена Валерьевна</h4>
+                        <div class="doctor-descr">
+                          <div class="descr-proff">Детский педиатр</div>
+                          <div class="descr-category">Высшая категория</div>
+                        </div>
+                        <p class="doctor-clinic">Принимает в 5 клиниках</p>
+                        <p class="doctor-info">Принимает детей и взрослых, врач высшей категории, к.м.н.</p>
+                        <p class="doctor-detail">Подробнее</p>
+                    </div>
+                  </div>
+                  <div class="doctor-bottom">
+                    <div class="dropdown-btn">Расписание врача</div>
+                    <a href="https://mc-aybolit.ru/zapis/" class="meet">Запись на прием</a>
+                  </div>
+                  <div class="dropdown-card">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-text swiper-text-active">ул. Зур Урам, д. 1а</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. пр. Победы, д.182 б</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. Меридианная, д.116</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. Сыртлановой, д.116</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. Зур Урам, д. 1а</div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-text swiper-text-active">
+                            <div class="swiper-text-up">ВТ</div>
+                            <div class="swiper-text-down">23.03</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">
+                            <div class="swiper-text-up">СР</div>
+                            <div class="swiper-text-down">24.03</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">
+                            <div class="swiper-text-up">ЧТ</div>
+                            <div class="swiper-text-down">25.03</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">
+                            <div class="swiper-text-up">ПТ</div>
+                            <div class="swiper-text-down">26.03</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-text swiper-text-active">15:00</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">15:15</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">16:15</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">18:15</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">15:30</div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="doctor-item">
+                <div class="doctor-item-card">
+                  <div class="doctor-top">
+                    <div class="doctor-left">
+                      <img src="../assets/img/doctor_photo.jpg" alt="" class="doctor-img">
+                      <p class="doctor-exp">Стаж 15 лет</p>
+                    </div>
+                    <div class="doctor-right">
+                      <h4 class="doctor-name">Лазарева Елена Валерьевна</h4>
+                      <div class="doctor-descr">
+                        <div class="descr-proff">Детский педиатр</div>
+                        <div class="descr-category">Высшая категория</div>
+                      </div>
+                      <p class="doctor-clinic">Принимает в 5 клиниках</p>
+                      <p class="doctor-info">Принимает детей и взрослых, врач высшей категории, к.м.н.</p>
+                      <p class="doctor-detail">Подробнее</p>
+                    </div>
+                  </div>
+                  <div class="doctor-bottom">
+                    <div class="dropdown-btn">Расписание врача</div>
+                    <a href="https://mc-aybolit.ru/zapis/" class="meet">Запись на прием</a>
+                  </div>
+                  <div class="dropdown-card">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-text swiper-text-active">ул. Зур Урам, д. 1а</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. пр. Победы, д.182 б</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. Меридианная, д.116</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. Сыртлановой, д.116</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. Зур Урам, д. 1а</div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-text swiper-text-active">
+                            <div class="swiper-text-up">ВТ</div>
+                            <div class="swiper-text-down">23.03</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">
+                            <div class="swiper-text-up">СР</div>
+                            <div class="swiper-text-down">24.03</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">
+                            <div class="swiper-text-up">ЧТ</div>
+                            <div class="swiper-text-down">25.03</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">
+                            <div class="swiper-text-up">ПТ</div>
+                            <div class="swiper-text-down">26.03</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-text swiper-text-active">15:00</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">15:15</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">16:15</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">18:15</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">15:30</div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="doctor-item">
+                <div class="doctor-item-card">
+                  <div class="doctor-top">
+                    <div class="doctor-left">
+                      <img src="../assets/img/doctor_photo.jpg" alt="" class="doctor-img">
+                      <p class="doctor-exp">Стаж 15 лет</p>
+                    </div>
+                    <div class="doctor-right">
+                      <h4 class="doctor-name">Лазарева Елена Валерьевна</h4>
+                      <div class="doctor-descr">
+                        <div class="descr-proff">Детский педиатр</div>
+                        <div class="descr-category">Высшая категория</div>
+                      </div>
+                      <p class="doctor-clinic">Принимает в 5 клиниках</p>
+                      <p class="doctor-info">Принимает детей и взрослых, врач высшей категории, к.м.н.</p>
+                      <p class="doctor-detail">Подробнее</p>
+                    </div>
+                  </div>
+                  <div class="doctor-bottom">
+                    <div class="dropdown-btn">Расписание врача</div>
+                    <a href="https://mc-aybolit.ru/zapis/" class="meet">Запись на прием</a>
+                  </div>
+                  <div class="dropdown-card">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-text swiper-text-active">ул. Зур Урам, д. 1а</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. пр. Победы, д.182 б</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. Меридианная, д.116</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. Сыртлановой, д.116</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. Зур Урам, д. 1а</div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-text swiper-text-active">
+                            <div class="swiper-text-up">ВТ</div>
+                            <div class="swiper-text-down">23.03</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">
+                            <div class="swiper-text-up">СР</div>
+                            <div class="swiper-text-down">24.03</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">
+                            <div class="swiper-text-up">ЧТ</div>
+                            <div class="swiper-text-down">25.03</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">
+                            <div class="swiper-text-up">ПТ</div>
+                            <div class="swiper-text-down">26.03</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-text swiper-text-active">15:00</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">15:15</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">16:15</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">18:15</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">15:30</div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="doctor-item">
+                <div class="doctor-item-card">
+                  <div class="doctor-top">
+                    <div class="doctor-left">
+                      <img src="../assets/img/doctor_photo.jpg" alt="" class="doctor-img">
+                      <p class="doctor-exp">Стаж 15 лет</p>
+                    </div>
+                    <div class="doctor-right">
+                      <h4 class="doctor-name">Лазарева Елена Валерьевна</h4>
+                      <div class="doctor-descr">
+                        <div class="descr-proff">Детский педиатр</div>
+                        <div class="descr-category">Высшая категория</div>
+                      </div>
+                      <p class="doctor-clinic">Принимает в 5 клиниках</p>
+                      <p class="doctor-info">Принимает детей и взрослых, врач высшей категории, к.м.н.</p>
+                      <p class="doctor-detail">Подробнее</p>
+                    </div>
+                  </div>
+                  <div class="doctor-bottom">
+                    <div class="dropdown-btn">Расписание врача</div>
+                    <a href="https://mc-aybolit.ru/zapis/" class="meet">Запись на прием</a>
+                  </div>
+                  <div class="dropdown-card">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-text swiper-text-active">ул. Зур Урам, д. 1а</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. пр. Победы, д.182 б</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. Меридианная, д.116</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. Сыртлановой, д.116</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">ул. Зур Урам, д. 1а</div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-text swiper-text-active">
+                            <div class="swiper-text-up">ВТ</div>
+                            <div class="swiper-text-down">23.03</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">
+                            <div class="swiper-text-up">СР</div>
+                            <div class="swiper-text-down">24.03</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">
+                            <div class="swiper-text-up">ЧТ</div>
+                            <div class="swiper-text-down">25.03</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">
+                            <div class="swiper-text-up">ПТ</div>
+                            <div class="swiper-text-down">26.03</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-text swiper-text-active">15:00</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">15:15</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">16:15</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">18:15</div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-text">15:30</div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="doctors-btn">
+              <button class="btn-more">ПОКАЗАТЬ ЕЩЕ</button>
+            </div>
+        </div>
+
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container ">
+      <div class="services-containe">
+        <h2 class="title-doctor title-services">Услуги</h3>
+          <div class="chose-criterion">
+            <ul class="list-reset list list-chose ">
+              <li class="list-item chose-item chose-item-active">Аллергические исследования</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="veggies">
+    <div class="container">
+      <div class="veggies-containe">
+        <div class="vegies-top">
+          <h4 class="veggies-title">Овощи</h4>
+          <button class="veggies-btn">1 услуга</button>
+        </div>
+        <div class="veggies-bottom">
+          <div class="veg-left">
+            <h5 class="veg-subtitle">Ig E Грибы (шампиньоны), F212</h5>
+            <p class="veg-descr">Информативное исследование состояния предстательной железы, проводимое с помощью
+              ультразвука. Датчик вводится через прямую кишку, поэтому располагается очень близко к исследуемым
+              структурам, что позволяет получить лучшую визуализацию (в сравнении с трансабдоминальным УЗИ).</p>
+          </div>
+          <div class="veg-right">
+            <div class="veg-right-top">
+              <div class="count-clinics">14 клиник</div>
+              <div class="price">
+                <div class="new-price">550 ₽</div>
+                <div class="old-price">690 ₽</div>
+              </div>
+              <a href="https://mc-aybolit.ru/zapis/" class="meet veg-meet">записаться</a>
+              <button class="veg-close"></button>
+            </div>
+            <div class="veg-right-bottom">
+              <img src="../assets/img/place.jpg" alt="" class=" veg-img">
+              <div class="address">
+                <div class="addr">ул. Проспект Победы, 16</div>
+                <div class="addr-show">Показать на карте</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="clinics">
+    <div class="container">
+      <div class="clinics-containe">
+        <h2 class="title-doctor clinic-title">Клиники</h2>
+
+        <ul class="list-reset clinic-list">
+          <li class="clinic-item">
+            <div class="clinic-img">
+              <img src="../assets/img/clinics.jpg" alt="клиника №1" class="">
+
+            </div>
+            <div class="clinic-item-text">
+              <p class="addr-show clinic-adr-show">Казань</p>
+              <h4 class="item-title">ул.Зур Урам, д. 1а</h4>
+              <p class="item-descr">Пн-пт 7:00 - 20:00; Сб 7:30 - 18:00; Вс 8:00 - 15:00</p>
+              <p class="item-personal">8 специалистов</p>
+              <a href="#" class="item-road">Схема проезда</a>
+            </div>
+          </li>
+          <li class="clinic-item">
+            <div class="clinic-img">
+              <img src="../assets/img/clinics.jpg" alt="клиника №1" class="">
+
+            </div>
+            <div class="clinic-item-text">
+              <p class="addr-show clinic-adr-show">Казань</p>
+              <h4 class="item-title">ул.Зур Урам, д. 1а</h4>
+              <p class="item-descr">Пн-пт 7:00 - 20:00; Сб 7:30 - 18:00; Вс 8:00 - 15:00</p>
+              <p class="item-personal">8 специалистов</p>
+              <a href="#" class="item-road">Схема проезда</a>
+            </div>
+          </li>
+          <li class="clinic-item">
+            <div class="clinic-img">
+              <img src="../assets/img/clinics.jpg" alt="клиника №1" class="">
+
+            </div>
+            <div class="clinic-item-text">
+              <p class="addr-show clinic-adr-show">Казань</p>
+              <h4 class="item-title">ул.Зур Урам, д. 1а</h4>
+              <p class="item-descr">Пн-пт 7:00 - 20:00; Сб 7:30 - 18:00; Вс 8:00 - 15:00</p>
+              <p class="item-personal">8 специалистов</p>
+              <a href="#" class="item-road">Схема проезда</a>
+            </div>
+          </li>
+          <li class="clinic-item">
+            <div class="clinic-img">
+              <img src="../assets/img/clinics.jpg" alt="клиника №1" class="">
+
+            </div>
+            <div class="clinic-item-text">
+              <p class="addr-show clinic-adr-show">Казань</p>
+              <h4 class="item-title">ул.Зур Урам, д. 1а</h4>
+              <p class="item-descr">Пн-пт 7:00 - 20:00; Сб 7:30 - 18:00; Вс 8:00 - 15:00</p>
+              <p class="item-personal">8 специалистов</p>
+              <a href="#" class="item-road">Схема проезда</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner grid">
+        <a href="#" class="footer__logo">
+          <img src="/local/assets/img/logo.png" alt="">
+        </a>
+        <div class="footer__phones">
+          <div class="footer__phone_item">
+            <div class="footer__phone_title">Казань</div>
+            <a href="#" class="footer__phone_number"><i class="icon-phone"></i>8 800 5000 600</a>
+          </div>
+          <div class="footer__phone_item">
+            <div class="footer__phone_title">Лениногорск</div>
+            <a href="#" class="footer__phone_number"><i class="icon-phone"></i>8 800 5000 600</a>
+          </div>
+          <div class="footer__phone_item">
+            <div class="footer__phone_title">Йошкар-Ола</div>
+            <a href="#" class="footer__phone_number"><i class="icon-phone"></i>8 800 5000 600</a>
+          </div>
+          <div class="footer__phone_item">
+            <div class="footer__phone_title">Зелинодольск</div>
+            <a href="#" class="footer__phone_number"><i class="icon-phone"></i>8 800 5000 600</a>
+          </div>
+        </div>
+        <div class="footer__mail">
+          <a href="help@mc-aybolit.ru" class="footer__mail_link">help@mc-aybolit.ru</a>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__nav_col">
+            <div class="footer_nav__title point point--blue">Компания</div>
+            <a href='#' class="footer_nav__link">О компании</a>
+            <a href='#' class="footer_nav__link">Наши врачи</a>
+            <a href='#' class="footer_nav__link">Контакты</a>
+            <a href='#' class="footer_nav__link">Сотрудничество</a>
+          </div>
+          <div class="footer__nav_col">
+            <div class="footer_nav__title point">ПАЦИЕНТАМ</div>
+            <a href='#' class="footer_nav__link">Наши врачи</a>
+            <a href='#' class="footer_nav__link">Результат анализов</a>
+            <a href='#' class="footer_nav__link">ФНС</a>
+            <a href='#' class="footer_nav__link">Отзывы</a>
+          </div>
+        </div>
+        <div class="footer__button">
+          <div class="button button--red button--with-icon">
+            <i class="icon-note icon--white"></i>
+            <span>Запись на прием</span>
+          </div>
+        </div>
+        <div class="footer__social">
+          <div class="social__links">
+            <a href="#" class="social_links_item">
+              <i class="icon-wp"></i>
+            </a>
+            <a href="#" class="social_links_item">
+              <i class="icon-tg"></i>
+            </a>
+            <a href="#" class="social_links_item">
+              <i class="icon-inst"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright grid">
+        <div class="footer__col">
+          <div class="footer__banks">
+            <img src="/local/assets/img/visa.png" alt="">
+            <img src="/local/assets/img/mastercard.png" alt="">
+            <img src="/local/assets/img/mir.png" alt="">
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__policy">
+            <p>Все права защищены. © 1990-2023</p>
+            <a href="https://mc-aybolit.ru/all/soglasie.pdf" target="_blank">Согласие на обработку персональных
+              данных</a><br>
+            <a href="https://mc-aybolit.ru/o-klinike/litsenzii-i-sertifikaty/" target="_blank">Лицензия и сертификаты
+              медицинского центра Айболит</a><br>
+            <a href="https://mc-aybolit.ru/all/politika.pdf" target="_blank">Политика по обработке персональных
+              данных</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__company-made">
+            Сделано в <a href="https://artrockets.ru/" target='_blank'><img src="/local/assets/img/Artrockets logo.svg"
+                alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="../assets/js/components/swiper.js"></script>
+  <script src="../assets/js/components/swiper-active.js"></script>
+  <script src="../assets/js/components/dropdown_doctor.js"></script>
+  <script src="../assets/js/components/chose_criterion.js"></script>
+
+</body>
+
+</html>

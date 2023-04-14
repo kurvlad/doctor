@@ -1,0 +1,63 @@
+.clinic-list {
+  display: grid;
+  grid-template-columns: 49% 49%;
+}
+
+.clinic-item {
+  display: grid;
+  grid-template-columns: 44% 56%;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #E0E4F4;
+  border-radius: 24px;
+  padding: 32px;
+}
+
+.clinic-item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.clinic-img {
+  width: 280px;
+  border-radius: 24px;
+  margin-right: 30px;
+  overflow: hidden;
+}
+
+.clinic-item-text {
+  padding-top: 46px;
+  padding-bottom: 46px;
+  color: #2D264B;
+}
+
+.clinic-adr-show {
+  letter-spacing: -0.02em;
+  margin-bottom: 23px;
+}
+
+.item-title {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.item-descr{
+  font-size: 14px;
+  color: #8E94AB;
+  margin-bottom: 30px;
+}
+
+.item-personal{
+  background-image: url('../../svg/specialist.svg');
+  margin-bottom: 30px;
+}
+
+
+.item-road{
+  background-image: url('../../svg/road.svg');
+}
+.item-personal,.item-road{
+  padding-left: 28px;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position-y:center ;
+}

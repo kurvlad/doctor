@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?firdm9');
+  src:  url('fonts/icomoon.eot?firdm9#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?firdm9') format('truetype'),
+    url('fonts/icomoon.woff?firdm9') format('woff'),
+    url('fonts/icomoon.svg?firdm9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-succes:before {
+  content: "\e91a";
+}
+.icon-doctor:before {
+  content: "\e919";
+}
+.icon-list:before {
+  content: "\e917";
+}
+.icon-map-fill:before {
+  content: "\e918";
+}
+.icon-book:before {
+  content: "\e914";
+}
+.icon-mark:before {
+  content: "\e915";
+}
+.icon-phone2:before {
+  content: "\e916";
+}
+.icon-more:before {
+  content: "\e913";
+}
+.icon-arrow-left:before {
+  content: "\e911";
+}
+.icon-arrow-right:before {
+  content: "\e912";
+}
+.icon-inst:before {
+  content: "\e903";
+}
+.icon-phone:before {
+  content: "\e906";
+}
+.icon-map:before {
+  content: "\e908";
+}
+.icon-clinic:before {
+  content: "\e90a";
+}
+.icon-analysis:before {
+  content: "\e900";
+}
+.icon-arrow-down:before {
+  content: "\e901";
+}
+.icon-arrow-right-long:before {
+  content: "\e902";
+}
+.icon-close:before {
+  content: "\e904";
+}
+.icon-gps:before {
+  content: "\e905";
+}
+.icon-mail:before {
+  content: "\e907";
+}
+.icon-note:before {
+  content: "\e909";
+}
+.icon-search:before {
+  content: "\e90b";
+}
+.icon-service:before {
+  content: "\e90c";
+}
+.icon-spec:before {
+  content: "\e90d";
+}
+.icon-tg:before {
+  content: "\e90e";
+}
+.icon-wp:before {
+  content: "\e90f";
+}
+.icon-burger:before {
+  content: "\e910";
+}
